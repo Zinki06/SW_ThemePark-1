@@ -106,7 +106,7 @@ class DiaryTransformerApp(tk.Tk):
     def call_gemini_generate(self, text: str):
         # Build instruction prompt including selected gender
         gender = self.gender_var.get()
-        sys_prompt = f"다음 내용에 맞게 아이들이 좋아하도록 동심 가득하게 지브리 스타일로 그려줘. 글은 쓰지마. {gender} 아이 한 명을 무조건 그려줘"
+        sys_prompt = f"다음 내용에 맞게 아이들이 좋아하도록 동심 가득하게 지브리 스타일로 그려줘. 그림에 글은 쓰지마. {gender} 아이 한 명을 무조건 그려줘"
         combined_prompt = f"{sys_prompt}: {text}"
         response = generative_client.models.generate_content(
             model="models/gemini-2.0-flash-exp-image-generation",

@@ -44,5 +44,4 @@ curl https://api.openai.com/v1/chat/completions \
 
 ---
 
-**참고**  
-- 두 모델 모두 *Usage tier 1* 이상 조직에서 사용할 수 있으며, Playground/Responses API에서도 동일한 모델명을 지정하면 됨.  ([How can I access GPT-4, GPT-4o, and GPT-4o mini?](https://help.openai.com/en/articles/7102672-how-can-i-access-gpt-4-gpt-4o-and-gpt-4o-mini?utm_source=chatgpt.com))
+
