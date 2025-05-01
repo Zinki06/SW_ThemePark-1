@@ -106,7 +106,7 @@ class DiaryTransformerApp(tk.Tk):
     def call_gemini_generate(self, text: str):
         # Build instruction prompt including selected gender
         gender = self.gender_var.get()
-        sys_prompt = f"다음 내용에 맞게 아이들이 좋아하도록 동심 가득하게 지브리 스타일로 그려줘. 그림에 글은 쓰지마. {gender} 아이 한 명을 무조건 그려줘"
+        sys_prompt = f"아래 조건에 충실히 따라서 아이들이 좋아할 수 있도록 따뜻하고 몽환적인 지브리(Ghibli) 애니메이션 스타일로 일러스트를 그려줘. 전체 분위기는 동화적인 세계를 배경으로 해줘 (예: 숲속, 들판, 구름 위, 작은 마을 등).색감은 부드럽고 따뜻하게, 세밀한 붓터치와 풍부한 질감이 느껴지도록 해줘.그림 속에는 반드시 {gender} 아이 한 명이 등장해야 하고, 아이는 상상 속 세계에서 모험하거나 자연을 느끼는 모습으로 표현해줘.배경 속에는 동물이나 마법적인 존재가 있을 수 있지만, 인물은 반드시 한 명만 나와야 해.글자는 일절 넣지 말고, 시각적 이야기로만 상상력을 자극하는 구도로 그려줘."
         combined_prompt = f"{sys_prompt}: {text}"
         response = generative_client.models.generate_content(
             model="models/gemini-2.0-flash-exp-image-generation",

@@ -11,5 +11,5 @@ git push
 #요약
 git status
 git add .
-git commit -m "prototype_v1.1"
+git commit -m "prototype_v1.3, improve sys_prompt "
 git push
