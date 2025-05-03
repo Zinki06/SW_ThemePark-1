@@ -40,7 +40,7 @@ Gemini API를 활용하여 아이들의 그림일기 작성을 돕는 데스크�
 ## 기술 스택
 
 - Python 3.11.12
-- tkinter (GUI)
+- customtkinter (GUI)
 - google-generativeai (Gemini API 클라이언트)
 - python-dotenv (환경 변수 관리)
 - Pillow (이미지 처리)
