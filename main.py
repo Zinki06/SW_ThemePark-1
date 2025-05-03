@@ -29,7 +29,7 @@ class DiaryTransformerApp(ctk.CTk):
         # 컬러 팔레트
         PRIMARY = "#017DB3"
         SECONDARY = "#8CD4EA"
-        BACKGROUND = "#F9C6C5"  # 전체 배경 연분홍
+        BACKGROUND = "#ffdfdf"  # 전체 배경 연분홍
         PANEL = "#F0FAFC"       # 박스는 하늘빛
         ACCENT = "#F7A6A6"      # 성별 버튼 색상을 부드러운 분홍색으로
 
@@ -55,9 +55,24 @@ class DiaryTransformerApp(ctk.CTk):
 
         button_frame = ctk.CTkFrame(left_frame, fg_color="transparent")
         button_frame.pack(pady=15)
-        ctk.CTkButton(button_frame, text="✏️ 일기로 변환", command=self.transform_text, width=160, fg_color=SECONDARY, text_color="black", hover_color=PRIMARY).grid(row=0, column=0, padx=10)
-        ctk.CTkButton(button_frame, text="🖼️ 그림 생성", command=self.generate_image, width=160, fg_color=SECONDARY, text_color="black", hover_color=PRIMARY).grid(row=0, column=1, padx=10)
-        ctk.CTkButton(button_frame, text="🎙️ 말로 그림 생성", command=self.speech_to_image, width=160, fg_color=SECONDARY, text_color="black", hover_color=PRIMARY).grid(row=0, column=2, padx=10)
+        ctk.CTkButton(
+            button_frame, text="✏️ 일기로 변환", command=self.transform_text,
+            width=180, height=50, fg_color=SECONDARY, text_color="black",
+            hover_color=PRIMARY, font=("맑은 고딕", 15, "bold")
+        ).grid(row=0, column=0, padx=10)
+
+        ctk.CTkButton(
+            button_frame, text="🖼️ 그림 생성", command=self.generate_image,
+            width=180, height=50, fg_color=SECONDARY, text_color="black",
+            hover_color=PRIMARY, font=("맑은 고딕", 15, "bold")
+        ).grid(row=0, column=1, padx=10)
+
+        ctk.CTkButton(
+            button_frame, text="🎙️ 말로 그림 생성", command=self.speech_to_image,
+            width=180, height=50, fg_color=SECONDARY, text_color="black",
+            hover_color=PRIMARY, font=("맑은 고딕", 15, "bold")
+        ).grid(row=0, column=2, padx=10)
+
 
         ctk.CTkLabel(left_frame, text="아이 성별 선택:", font=("맑은 고딕", 15, "bold"), text_color="black").pack(pady=(15, 5))
         self.gender_var = ctk.StringVar(value="남자")
@@ -69,7 +84,7 @@ class DiaryTransformerApp(ctk.CTk):
         right_frame.grid(row=0, column=1, sticky="nsew", padx=40, pady=30)
 
         ctk.CTkLabel(right_frame, text="📄 변환된 일기 내용:", font=("맑은 고딕", 18, "bold"), text_color="black").pack(pady=(20, 10))
-        self.output_text = ctk.CTkTextbox(right_frame, height=400, width=600, font=("맑은 고딕", 13), corner_radius=10, border_width=1, border_color="#CCCCCC", text_color="black")
+        self.output_text = ctk.CTkTextbox(right_frame, height=200, width=600, font=("맑은 고딕", 13), corner_radius=10, border_width=1, border_color="#CCCCCC", text_color="black")
         self.output_text.pack(padx=30, pady=10, fill="x")
         self.output_text.configure(state="disabled")
 
@@ -129,7 +144,7 @@ class DiaryTransformerApp(ctk.CTk):
 
     def show_image(self, pil_img):
         img = pil_img.copy()
-        img.thumbnail((400, 400))
+        img.thumbnail((700, 700))
         tk_img = ImageTk.PhotoImage(img)
         self.image_label.configure(image=tk_img)
         self.image_label.image = tk_img
