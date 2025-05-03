@@ -3,3 +3,8 @@ Pillow==10.0.0
 google-generativeai==0.4.0
 python-dotenv==1.0.0
 google-genai
+
+#추가
+speechrecognition==3.10.0
+pyaudio==0.2.13  # (윈도우 사용자는 설치 시 주의 필요)
+customtkinter
