@@ -8,8 +8,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Gemini AI](https://img.shields.io/badge/Gemini_2.0-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev)
-[![License](https://img.shields.io/badge/License-MIT-brightgreen?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)](.)
 
 <br>
 
