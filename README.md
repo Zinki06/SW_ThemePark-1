@@ -230,20 +230,6 @@ pipwin install pyaudio
 
 ---
 
-## 🚀 **향후 로드맵**
-
-<div align="center">
-
-```
-🎯 v1.1  →  💾 그림 저장 기능
-🎯 v1.2  →  🎨 다양한 아트 스타일
-🎯 v1.3  →  📚 일기 히스토리 관리  
-🎯 v2.0  →  🌐 웹 버전 출시
-```
-
-</div>
-
----
 
 <div align="center">
 
@@ -259,8 +245,7 @@ pipwin install pyaudio
 
 <br>
 
-**✨ 아이들의 꿈과 상상이 현실이 되는 마법 같은 순간을 만들어갑니다 ✨**
 
-<sub>Made with ❤️ for children's creativity</sub>
+<sub>ai daiary</sub>
 
 </div>
